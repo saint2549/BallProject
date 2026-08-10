@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://iscgxwsredpn"]
+
+[ext_resource type="Script" uid="uid://cu7kkkd7cnfj4" path="res://Script/p_3_1.gd" id="1_ebr3h"]
+[ext_resource type="Texture2D" uid="uid://bvvbor71bmeyn" path="res://Asset/P3minion.png" id="2_tnhcj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xkde6"]
+radius = 202.2375
+
+[node name="P3_1" type="CharacterBody2D" unique_id=1400082516]
+script = ExtResource("1_ebr3h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=215811526]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_tnhcj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=47916337]
+scale = Vector2(0.099999994, 0.099999994)
+shape = SubResource("CircleShape2D_xkde6")

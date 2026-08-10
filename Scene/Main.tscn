@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://sdkcb826s4ed"]
+
+[ext_resource type="Script" uid="uid://qghnpdra3q5g" path="res://Script/main.gd" id="1_h175a"]
+[ext_resource type="Texture2D" uid="uid://d2qm62t21qjlq" path="res://Asset/Arena Block.png" id="1_xhtwi"]
+[ext_resource type="Texture2D" uid="uid://ckxyq7oyn8acw" path="res://Asset/Return.png" id="4_h175a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6ejq"]
+size = Vector2(64.48993, 63.852875)
+
+[node name="Main" type="Node2D" unique_id=910000438]
+script = ExtResource("1_h175a")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1667253532]
+offset_left = -63.0
+offset_top = -54.0
+offset_right = 1344.0
+offset_bottom = 1100.0
+color = Color(0.5689727, 0.56897277, 0.5689727, 1)
+
+[node name="Wall" type="Node2D" parent="." unique_id=632624522 groups=["Walls"]]
+
+[node name="Wall_Up" type="Sprite2D" parent="Wall" unique_id=67609605]
+position = Vector2(588.5, 0)
+scale = Vector2(19.390625, 1)
+texture = ExtResource("1_xhtwi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall/Wall_Up" unique_id=17278606 groups=["Walls"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/Wall_Up/StaticBody2D" unique_id=1441976835]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_g6ejq")
+
+[node name="Wall_Left" type="Sprite2D" parent="Wall" unique_id=1147024263]
+position = Vector2(90.00001, 397.5)
+scale = Vector2(3.8125002, 13.421875)
+texture = ExtResource("1_xhtwi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall/Wall_Left" unique_id=2097340155 groups=["Walls"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/Wall_Left/StaticBody2D" unique_id=541437296]
+position = Vector2(0, -0.11176109)
+shape = SubResource("RectangleShape2D_g6ejq")
+
+[node name="Wall_Right" type="Sprite2D" parent="Wall" unique_id=197767854]
+position = Vector2(1116.5, 394.50003)
+scale = Vector2(3.421875, 13.328126)
+texture = ExtResource("1_xhtwi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall/Wall_Right" unique_id=434420255 groups=["Walls"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/Wall_Right/StaticBody2D" unique_id=1538322191]
+position = Vector2(0, -5.722046e-06)
+scale = Vector2(1.0000004, 1.0000002)
+shape = SubResource("RectangleShape2D_g6ejq")
+
+[node name="Wall_Down" type="Sprite2D" parent="Wall" unique_id=1769139194]
+position = Vector2(589, 795)
+scale = Vector2(19.390625, 1)
+texture = ExtResource("1_xhtwi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall/Wall_Down" unique_id=1889648978 groups=["Walls"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/Wall_Down/StaticBody2D" unique_id=510789763]
+position = Vector2(0.2965355, -1)
+shape = SubResource("RectangleShape2D_g6ejq")
+
+[node name="WinnerLabel" type="Label" parent="." unique_id=981300447]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 380.0
+offset_top = 370.0
+offset_right = 918.0
+offset_bottom = 496.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 80
+text = "Winner"
+
+[node name="Return" type="Button" parent="." unique_id=623291446]
+process_mode = 3
+offset_left = 1080.0
+offset_top = 63.0
+offset_right = 1139.0
+offset_bottom = 123.0
+
+[node name="Return2" type="Sprite2D" parent="Return" unique_id=685603152]
+position = Vector2(29, 30)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_h175a")
+
+[node name="P1HP" type="Label" parent="." unique_id=2096517705]
+offset_left = 71.0
+offset_top = 837.0
+offset_right = 448.0
+offset_bottom = 902.0
+theme_override_font_sizes/font_size = 36
+text = "P1 HP:"
+
+[node name="P2HP" type="Label" parent="." unique_id=218303089]
+offset_left = 725.0
+offset_top = 838.0
+offset_right = 1102.0
+offset_bottom = 903.0
+theme_override_font_sizes/font_size = 36
+text = "P2 HP:"
+
+[node name="P1MinionContainer" type="HFlowContainer" parent="." unique_id=793744042]
+offset_left = 58.0
+offset_top = 891.0
+offset_right = 485.0
+offset_bottom = 985.0
+
+[node name="P2MinionContainer" type="HFlowContainer" parent="." unique_id=2007467434]
+offset_left = 724.0
+offset_top = 891.0
+offset_right = 1159.0
+offset_bottom = 979.0
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

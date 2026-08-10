@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ds78ik7recbuu"]
+
+[ext_resource type="Script" uid="uid://ck84hc708nb07" path="res://Script/dagger.gd" id="1_umxcs"]
+[ext_resource type="Texture2D" uid="uid://dh88r4re1t8mw" path="res://Asset/Solo Dagger-1.png.png" id="2_lyq85"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30of8"]
+size = Vector2(114, 46)
+
+[node name="Dagger" type="Area2D" unique_id=1011431296]
+script = ExtResource("1_umxcs")
+
+[node name="SoloDagger1" type="Sprite2D" parent="." unique_id=1648581131]
+rotation = 1.5707964
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_lyq85")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1138311588]
+shape = SubResource("RectangleShape2D_30of8")
