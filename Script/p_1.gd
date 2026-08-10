@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var character_name: String = "ทีม"
+@export var character_name: String = "Team"
 @export var team: String = "P1"
 signal hp_changed(new_hp: int)
 

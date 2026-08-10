@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var character_name: String = "เปาเปา"
+@export var character_name: String = "Paupau"
 signal hp_changed(new_hp: int)
 signal minion_freed
 
