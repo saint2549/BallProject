@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c4rij5l8l8fii" path="res://Script/p_1.gd" id="1_pay7b"]
 [ext_resource type="Texture2D" uid="uid://dcyjjl48lqehp" path="res://Asset/P1.png" id="2_pay7b"]
-[ext_resource type="Texture2D" uid="uid://cpiopksr00t65" path="res://Asset/HandUlt.png" id="3_q0yfp"]
+[ext_resource type="Texture2D" uid="uid://oye132g3t8iv" path="res://Asset/HandUltFix.png" id="3_q0yfp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mmy5j"]
 radius = 510.09808
