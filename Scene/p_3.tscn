@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cy766gne4c0y7" path="res://Asset/Drawing Tablet.png" id="2_xkde6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkde6"]
-radius = 202.2375
+radius = 560.08936
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2ptm"]
 atlas = ExtResource("2_xkde6")

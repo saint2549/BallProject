@@ -7,6 +7,7 @@ signal hp_changed(new_hp: int)
 @export var speed: int = 400
 @export var hp: int = 100
 @export var minion_scene: PackedScene = preload("res://Scene/p_2_1.tscn")
+var is_silenced: bool = false
 
 var damage_cooldown: float = 0.0
 var move_direction: Vector2 = Vector2.ZERO

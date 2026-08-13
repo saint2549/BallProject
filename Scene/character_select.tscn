@@ -15,7 +15,7 @@ script = ExtResource("1_ee1bg")
 
 [node name="Background" type="ColorRect" parent="." unique_id=2020702203]
 layout_mode = 0
-offset_right = 1219.0
+offset_right = 1420.0
 offset_bottom = 1011.0
 color = Color(1, 0.52156866, 0, 1)
 
@@ -29,17 +29,17 @@ color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=847128820]
 layout_mode = 0
-offset_left = 1021.0
-offset_top = 388.0
-offset_right = 1181.0
-offset_bottom = 547.0
+offset_left = 1204.0
+offset_top = 391.0
+offset_right = 1364.0
+offset_bottom = 550.0
 color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="." unique_id=855113399]
 layout_mode = 0
 offset_left = 198.0
 offset_top = 95.0
-offset_right = 1005.0
+offset_right = 1165.0
 offset_bottom = 911.0
 color = Color(0.7792914, 0.7792914, 0.7792913, 1)
 
@@ -53,17 +53,17 @@ color = Color(0.8859595, 0, 0.17868474, 1)
 
 [node name="P2Zone" type="ColorRect" parent="." unique_id=1801511285]
 layout_mode = 0
-offset_left = 1029.0
-offset_top = 396.0
-offset_right = 1174.0
-offset_bottom = 539.0
+offset_left = 1212.0
+offset_top = 397.0
+offset_right = 1357.0
+offset_bottom = 540.0
 color = Color(0, 0, 0.8862745, 1)
 
 [node name="CharacterSelectBG" type="ColorRect" parent="." unique_id=18065564]
 layout_mode = 0
 offset_left = 209.0
 offset_top = 105.0
-offset_right = 994.0
+offset_right = 1152.0
 offset_bottom = 899.0
 
 [node name="Char1" type="Control" parent="." unique_id=1371763431]
@@ -109,10 +109,10 @@ texture = ExtResource("5_6u2q3")
 
 [node name="Start" type="Button" parent="." unique_id=1037910694]
 layout_mode = 0
-offset_left = 468.0
-offset_top = 765.0
-offset_right = 770.0
-offset_bottom = 871.0
+offset_left = 556.0
+offset_top = 770.0
+offset_right = 858.0
+offset_bottom = 876.0
 
 [node name="Start1_png" type="Sprite2D" parent="Start" unique_id=1907264507]
 position = Vector2(152, 62)
@@ -120,10 +120,10 @@ texture = ExtResource("5_j20vs")
 
 [node name="Return" type="Button" parent="." unique_id=675333452]
 layout_mode = 0
-offset_left = 1080.0
-offset_top = 63.0
-offset_right = 1139.0
-offset_bottom = 123.0
+offset_left = 1281.0
+offset_top = 44.0
+offset_right = 1340.0
+offset_bottom = 104.0
 
 [node name="Return2" type="Sprite2D" parent="Return" unique_id=1329265730]
 position = Vector2(29, 30)

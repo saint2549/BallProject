@@ -19,23 +19,29 @@ var skillcharge: int = 0
 var damage_cooldown: float = 0.0
 var move_direction: Vector2 = Vector2.ZERO
 
+# 🛑 ตัวแปรสำหรับควบคุมการปิดสกิล
+var is_silenced: bool = false
+var is_ult_active: bool = false
+
 func _ready() -> void:
 	var random_x = randf_range(-1.0, 1.0)
 	var random_y = randf_range(-1.0, 1.0)
 	move_direction = Vector2(random_x, random_y).normalized()
 
 func _physics_process(delta: float) -> void:
-	skilltimer += delta
-	if skilltimer >= 1.0:
-		skilltimer -= 1.0
-		skillcharge += 1
-		
-		# เช็กว่าครบ 5 วินาทีหรือยัง?
-		if skillcharge >= 5:
-			skillcharge = 0
-			Skill(3) # 🟢 เสก 3 ตัว + เร่งความเร็ว Animation 2 วินาที
-		else:
-			Skill(1) # 🟢 เสก 1 ตัวปกติ (Animation ความเร็วเดิม)
+	# 🛑 สกิลจะไม่ทำงานและไม่นับเวลา ถ้าติด Silence หรืออยู่ในช่วงใช้ Ult
+	if not is_silenced and not is_ult_active:
+		skilltimer += delta
+		if skilltimer >= 1.0:
+			skilltimer -= 1.0
+			skillcharge += 1
+			
+			# เช็กว่าครบ 5 วินาทีหรือยัง?
+			if skillcharge >= 5:
+				skillcharge = 0
+				Skill(3) # 🟢 เสก 3 ตัว + เร่งความเร็ว Animation 2 วินาที
+			else:
+				Skill(1) # 🟢 เสก 1 ตัวปกติ (Animation ความเร็วเดิม)
 
 	if damage_cooldown > 0:
 		damage_cooldown -= delta
@@ -70,7 +76,7 @@ func Skill(count: int) -> void:
 		var minion = minion_scene.instantiate()
 		minion.team = self.team
 		
-		var offset = Vector2(randf_range(-60, 60), randf_range(-60, 60))
+		var offset = Vector2(randf_range(-120, 120), randf_range(-120, 120))
 		minion.global_position = self.global_position + offset
 		
 		main_scene.add_child(minion)

@@ -121,22 +121,22 @@ animations = [{
 script = ExtResource("1_ldxh0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1045748407]
-offset_right = 1212.0
+offset_right = 1417.0
 offset_bottom = 1009.0
 color = Color(0.8862616, 0.88626146, 0.8862615, 1)
 
 [node name="Start" type="Button" parent="." unique_id=1980468513]
-offset_left = 460.0
-offset_top = 571.0
-offset_right = 759.0
-offset_bottom = 673.0
+offset_left = 559.19995
+offset_top = 664.6
+offset_right = 858.19995
+offset_bottom = 766.6
 
 [node name="Start2" type="Sprite2D" parent="Start" unique_id=1912170129]
 position = Vector2(151, 60)
 texture = ExtResource("1_mcucm")
 
 [node name="Ball" type="AnimatedSprite2D" parent="." unique_id=632464002]
-position = Vector2(626, 263)
+position = Vector2(725.19995, 356.59998)
 scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_b8um7")
 autoplay = "default"

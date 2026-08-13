@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://qghnpdra3q5g" path="res://Script/main.gd" id="1_h175a"]
 [ext_resource type="Texture2D" uid="uid://d2qm62t21qjlq" path="res://Asset/Arena Block.png" id="1_xhtwi"]
 [ext_resource type="Texture2D" uid="uid://ckxyq7oyn8acw" path="res://Asset/Return.png" id="4_h175a"]
+[ext_resource type="Script" uid="uid://j27svo7bmu4c" path="res://Script/ult_bar.gd" id="4_togfq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6ejq"]
 size = Vector2(64.48993, 63.852875)
@@ -13,15 +14,15 @@ script = ExtResource("1_h175a")
 [node name="Background" type="ColorRect" parent="." unique_id=1667253532]
 offset_left = -63.0
 offset_top = -54.0
-offset_right = 1344.0
+offset_right = 1503.0
 offset_bottom = 1100.0
 color = Color(0.5689727, 0.56897277, 0.5689727, 1)
 
 [node name="Wall" type="Node2D" parent="." unique_id=632624522 groups=["Walls"]]
 
 [node name="Wall_Up" type="Sprite2D" parent="Wall" unique_id=67609605]
-position = Vector2(588.5, 0)
-scale = Vector2(19.390625, 1)
+position = Vector2(693, 0)
+scale = Vector2(22.65625, 1)
 texture = ExtResource("1_xhtwi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Wall/Wall_Up" unique_id=17278606 groups=["Walls"]]
@@ -31,8 +32,8 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_g6ejq")
 
 [node name="Wall_Left" type="Sprite2D" parent="Wall" unique_id=1147024263]
-position = Vector2(90.00001, 397.5)
-scale = Vector2(3.8125002, 13.421875)
+position = Vector2(98, 397.5)
+scale = Vector2(4.0625, 13.421875)
 texture = ExtResource("1_xhtwi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Wall/Wall_Left" unique_id=2097340155 groups=["Walls"]]
@@ -42,8 +43,8 @@ position = Vector2(0, -0.11176109)
 shape = SubResource("RectangleShape2D_g6ejq")
 
 [node name="Wall_Right" type="Sprite2D" parent="Wall" unique_id=197767854]
-position = Vector2(1116.5, 394.50003)
-scale = Vector2(3.421875, 13.328126)
+position = Vector2(1279.25, 395)
+scale = Vector2(3.9765615, 13.328126)
 texture = ExtResource("1_xhtwi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Wall/Wall_Right" unique_id=434420255 groups=["Walls"]]
@@ -83,10 +84,10 @@ text = "Winner"
 
 [node name="Return" type="Button" parent="." unique_id=623291446]
 process_mode = 3
-offset_left = 1080.0
-offset_top = 63.0
-offset_right = 1139.0
-offset_bottom = 123.0
+offset_left = 1294.0
+offset_top = 36.0
+offset_right = 1353.0
+offset_bottom = 96.0
 
 [node name="Return2" type="Sprite2D" parent="Return" unique_id=685603152]
 position = Vector2(29, 30)
@@ -102,23 +103,37 @@ theme_override_font_sizes/font_size = 36
 text = "P1 HP:"
 
 [node name="P2HP" type="Label" parent="." unique_id=218303089]
-offset_left = 725.0
-offset_top = 838.0
-offset_right = 1102.0
-offset_bottom = 903.0
+offset_left = 936.0
+offset_top = 831.0
+offset_right = 1313.0
+offset_bottom = 896.0
 theme_override_font_sizes/font_size = 36
 text = "P2 HP:"
 
 [node name="P1MinionContainer" type="HFlowContainer" parent="." unique_id=793744042]
-offset_left = 58.0
-offset_top = 891.0
-offset_right = 485.0
+offset_left = 26.0
+offset_top = 926.0
+offset_right = 642.0
 offset_bottom = 985.0
 
 [node name="P2MinionContainer" type="HFlowContainer" parent="." unique_id=2007467434]
-offset_left = 724.0
-offset_top = 891.0
-offset_right = 1159.0
-offset_bottom = 979.0
+offset_left = 784.0
+offset_top = 926.0
+offset_right = 1358.0
+offset_bottom = 982.0
+
+[node name="P1_UltBar" type="ProgressBar" parent="." unique_id=1176342598]
+offset_left = 69.0
+offset_top = 886.0
+offset_right = 303.0
+offset_bottom = 913.0
+script = ExtResource("4_togfq")
+
+[node name="P2_UltBar" type="ProgressBar" parent="." unique_id=950890453]
+offset_left = 927.0
+offset_top = 889.0
+offset_right = 1168.0
+offset_bottom = 916.0
+script = ExtResource("4_togfq")
 
 [connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://celo3a53ymkhd" path="res://Asset/P2_2.png" id="2_elktv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_elktv"]
-radius = 259.99997
+radius = 249.99997
 
 [node name="P2_1" type="CharacterBody2D" unique_id=1887957857]
 script = ExtResource("1_elktv")
